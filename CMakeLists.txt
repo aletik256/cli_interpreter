@@ -16,6 +16,7 @@ source_group("Functions" FILES ${functions})
 
 set(sources
     registrator.cpp
+    interpreter.cpp
     main.cpp
 )
 

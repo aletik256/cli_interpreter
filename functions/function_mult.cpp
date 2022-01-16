@@ -20,8 +20,8 @@ std::string FunctionMult::GetResult(const std::string *args, size_t args_size) c
     if (!args || args_size < 2) {
         throw std::logic_error("Wrong parameters number");
     }
-    int prod = 1;
-    for (size_t i = 0; i < args_size; ++i) {
+    auto prod = std::stoi(args[0]);
+    for (size_t i = 1; i < args_size; ++i) {
         prod *= std::stoi(args[i]);
     }
     return std::to_string(prod);

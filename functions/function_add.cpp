@@ -20,8 +20,8 @@ std::string FunctionAdd::GetResult(const std::string *args, size_t args_size) co
     if (!args || args_size < 2) {
         throw std::logic_error("Wrong parameters number");
     }
-    int summ = 0;
-    for (size_t i = 0; i < args_size; ++i) {
+    auto summ = std::stoi(args[0]);
+    for (size_t i = 1; i < args_size; ++i) {
         summ += std::stoi(args[i]);
     }
     return std::to_string(summ);
